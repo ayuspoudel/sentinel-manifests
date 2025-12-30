@@ -19,7 +19,7 @@ signals:
 
   errors:
     source: prometheus
-    query: sum(rate(demoapi_http_requests_total{status_class="5xx"}[5m]))
+    query: demoapi_http_requests_total{status_class="5xx"}
 
   slo:
     objective: 99.9
