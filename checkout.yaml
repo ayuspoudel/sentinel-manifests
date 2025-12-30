@@ -14,12 +14,12 @@ target:
 signals:
   traffic:
     source: prometheus
-    query: sum(rate(http_requests_total{service="checkout"}[1m]))
+    query: sum(rate(demoapi_http_requests_total{service="demoapi"}[1m]))
     minRPS: 0.1
 
   errors:
     source: prometheus
-    query: sum(rate(http_requests_total{service="checkout",status=~"5.."}[1m]))
+    query: sum(rate(demoapi_http_requests_total{service="demoapi",status=~"5.."}[1m]))
 
   slo:
     objective: 99.9
