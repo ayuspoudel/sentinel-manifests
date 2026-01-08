@@ -2,7 +2,7 @@ apiVersion: sentinel.sre/v1
 kind: Guard
 
 metadata:
-  name: checkout-api
+  name: demo-api
   owner: payments-sre
   environment: dev
 
